@@ -1,0 +1,11 @@
+footer{
+    height: 60px;
+    background-color: #556876;
+}
+
+footer p{
+    text-align: center;
+    line-height: 60px;
+    color: #fff;
+    font-size: 20px;
+}
