@@ -1,1 +1,66 @@
-<p>perfil works!</p>
+
+<div class="container">
+
+    <div class="infoGeneral">
+
+        <div class="mainPerfil">
+    
+            <div class="imgContainer">
+                <img src="../../../assets/imgs/pain.jpg" alt="">
+            </div>
+    
+            <form class="formulario">
+    
+                <span>
+                    {{ miUsuario.nombre }} {{ miUsuario.apellidos }}
+                </span>
+    
+                <input type="text" [value]="miUsuario.nombre">
+    
+                <input type="text" [value]="miUsuario.apellidos">
+    
+                <input type="text" [value]="miUsuario.correo">
+    
+            </form>
+    
+    
+        </div>
+    
+        <main class="mainEditar">
+    
+            <h2>
+                Editar
+            </h2>
+        
+            <div class="div-form">
+        
+                <form class="formulario">
+        
+                    <input type="text" placeholder="Nombre" #nombre>
+                    <input type="text" placeholder="Apellido" #apellido>
+                    <input type="email" placeholder="Correo" #correo>
+                    <input type="text" placeholder="Url" #url>                 
+                    
+                    <div class="btns">
+                        
+                        <a id="btnModificar" (click)="enviar(nombre.value, apellido.value, correo.value, url.value)">Modificar</a>
+                
+                    </div>
+                
+                </form>
+        
+            </div>
+        
+        </main>
+        
+    
+    </div>
+
+</div>
+
+
+
+
+
+
+

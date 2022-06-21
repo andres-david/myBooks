@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Usuario } from '../../models/usuario';
 
 @Component({
   selector: 'app-perfil',
@@ -7,7 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PerfilComponent implements OnInit {
 
-  constructor() { }
+  public miUsuario: Usuario;
+
+  constructor() { 
+    this.miUsuario = new Usuario(12345, "Filomena", "Hernandez", "filomena@filomena.com", "../../../assets/imgs/pain.jpg", "filomena123")
+  }
+
+  enviar(nombre: string, apellidos: string, correo: string, url: string){
+    this.miUsuario.nombre = nombre;
+    this.miUsuario.apellidos = apellidos;
+    this.miUsuario.correo = correo;
+    this.miUsuario.url = url
+  }
+
 
   ngOnInit(): void {
   }
