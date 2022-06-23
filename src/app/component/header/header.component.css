@@ -20,6 +20,7 @@ header{
 .div__header h1{
     color: #fff;
     font-size: 40px;
+    line-height: 80px;
 }
 
 .menu{
