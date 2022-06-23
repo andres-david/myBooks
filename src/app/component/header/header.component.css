@@ -27,7 +27,7 @@ header{
     display: block;
     list-style: none;
     height: 100%;
-    width: 350px;
+    min-width: 350px;
     line-height: 80px;
     /* margin-top: 20px; */
 

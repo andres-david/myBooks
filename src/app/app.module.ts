@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
 import { LibrosComponent } from './pages/libros/libros.component';
 import { RefPipe } from './pipes/ref.pipe';
 import { AddLibroComponent } from './pages/add-libro/add-libro.component';
+import { EditarComponent } from './pages/editar/editar.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { AddLibroComponent } from './pages/add-libro/add-libro.component';
     PerfilComponent,
     LibrosComponent,
     RefPipe,
-    AddLibroComponent
+    AddLibroComponent,
+    EditarComponent
   ],
   imports: [
     BrowserModule,
