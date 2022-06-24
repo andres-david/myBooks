@@ -32,7 +32,7 @@ export class ServicioService {
 
     for( let i = 0; i < this.libros.length; i++ ){
 
-      if( this.libros[i].id_libro = id_libro ){
+      if( this.libros[i].id_libro == id_libro ){
         
         libro = this.libros[i];
 
