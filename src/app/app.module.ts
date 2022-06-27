@@ -16,6 +16,8 @@ import { RefPipe } from './pipes/ref.pipe';
 import { AddLibroComponent } from './pages/add-libro/add-libro.component';
 import { EditarComponent } from './pages/editar/editar.component';
 import { LoginComponent } from './pages/login/login.component';
+import { FormularioLoginComponent } from './component/formulario-login/formulario-login.component';
+
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import { LoginComponent } from './pages/login/login.component';
     RefPipe,
     AddLibroComponent,
     EditarComponent,
-    LoginComponent
+    LoginComponent,
+    FormularioLoginComponent
   ],
   imports: [
     BrowserModule,

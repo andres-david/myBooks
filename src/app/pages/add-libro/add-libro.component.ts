@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Libro } from '../../models/libro';
 import { ServicioService } from '../../shared/servicio.service';
+import { Usuario } from '../../models/usuario';
+import { UsuarioService } from '../../shared/usuario.service';
+
 
 @Component({
   selector: 'app-add-libro',
@@ -13,15 +16,30 @@ export class AddLibroComponent implements OnInit {
 
   public nuLibro: Libro;
 
-  constructor(public servicioService: ServicioService) { }
+  public usuario: Usuario;
 
-  enviar(id_libro: string, id_usuario: string, titulo: string, 
+  constructor(public servicioService: ServicioService, public usuarioService:UsuarioService) {
+
+    this.usuario = this.usuarioService.usuario;
+    
+   }
+
+  enviar(id_libro: string, titulo: string, 
         tipo: string, autor: string, precio: string, url: string)
   {
-    this.nuLibro = new Libro(Number(id_libro), Number(id_usuario), 
+    this.nuLibro = new Libro(Number(id_libro), this.usuario.id_usuario, 
                             titulo, tipo, autor, Number(precio), url);
 
-    this.servicioService.add( this.nuLibro );
+    console.log( this.nuLibro );
+
+    console.log("usuario")
+
+    console.log( this.usuario );
+
+    this.servicioService.add( this.nuLibro )
+    .subscribe( data => {
+      console.log( data );
+    })
 
     let form = <HTMLFormElement>document.querySelector('.formulario');
 

@@ -1,14 +1,11 @@
 <header>
 
-    <div class="div__header">
+    <div class="div__header" *ngIf="usuarioService.logueado == true">
 
         <h1>
             MyBooks
         </h1>
         <ul class="menu">
-            <li>
-                <a routerLink="/">Home</a>
-            </li>
             <li>
                 <a routerLink="agregar">Añadir</a>
             </li>
@@ -19,13 +16,31 @@
                 <a routerLink="libros">Libros</a>
             </li>
             <li>
-                <a routerLink="registro">Registro</a>
-            </li>
-            <li>
                 <a routerLink="perfil">Perfil</a>
             </li>
         </ul>
 
     </div>
+
+    <div class="div__header" *ngIf="usuarioService.logueado == false">
+
+        <h1>
+            MyBooks
+        </h1>
+        <ul class="menu">
+            <li>
+                <a routerLink="/">Home</a>
+            </li>
+            <li>
+                <a (click)="goLogin()">Login</a>
+            </li>
+            <li>
+                <a routerLink="registro">Registro</a>
+            </li>
+        </ul>
+
+    </div>
+
+    
     
 </header>

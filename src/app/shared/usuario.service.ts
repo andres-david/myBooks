@@ -10,17 +10,17 @@ import { HttpClient } from '@angular/common/http';
 export class UsuarioService {
 
   private url: string = "http://localhost:3000/";
-  public logueado: boolean;
+  public logueado: boolean = false;
   public usuario: Usuario;
 
-  constructor( private http:HttpClient ) { }
+  constructor( private http:HttpClient  ) { }
 
   register( usuario: Usuario ){
     return this.http.post(this.url +"registro", usuario);
   }
 
   login( usuario: Usuario ){
-    return this.http.post(this.url + "usuario", usuario);
+    return this.http.post(this.url + "login", usuario);
   }
 
 }

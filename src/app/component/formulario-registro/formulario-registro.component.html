@@ -13,12 +13,12 @@
             <input type="text" id="surname" placeholder="Apellido" #apellidos>
             <input type="email" id="email" placeholder="Correo" #correo>
             <input type="text" id="url" placeholder="Url" #url>
-            <input type="password" id="password" placeholder="Contraseña" #password1>                 
-            <input type="password" id="passwordTwo" placeholder="Repetir Contraseña" #password2>                 
+            <input type="text" id="password" placeholder="Contraseña" #password1>                 
+            <input type="text" id="passwordTwo" placeholder="Repetir Contraseña" #password2>                 
             
             <div class="btns">
                 
-                <a id="btn__registrar" (click)="registrarse(nombre.value, apellidos.value, correo.value, url.value, password1, password2)">Registrarse</a>
+                <a id="btn__registrar" (click)="registrarse(nombre.value, apellidos.value, correo.value, url.value, password1.value, password2.value)">Registrarse</a>
         
             </div>
         

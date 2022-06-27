@@ -6,6 +6,7 @@ import { AddLibroComponent } from './pages/add-libro/add-libro.component';
 import { EditarComponent } from './pages/editar/editar.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LibrosComponent } from './pages/libros/libros.component';
+import { LoginComponent } from './pages/login/login.component';
 import { PerfilComponent } from './pages/perfil/perfil.component';
 import { RegistroComponent } from './pages/registro/registro.component';
 
@@ -33,6 +34,10 @@ const routes: Routes = [
   {
     path: "editar",
      component: EditarComponent
+  },
+  {
+    path: "login",
+    component: LoginComponent
   }
 ];
 

@@ -17,9 +17,16 @@ export class FormularioRegistroComponent implements OnInit {
   registrarse(nombre: string, apellidos: string, correo: string, 
               url: string, password1: string, password2: string)
   {
-    if( password1 === password2 ){
+    if( password1 == password2 ){
       let usuario: Usuario = new Usuario(nombre, apellidos, correo, url, password1)
-      this.usuarioService.register( usuario );
+
+      this.usuarioService.register( usuario )
+      .subscribe( ( data ) => {
+        
+        console.log( data );
+
+      })
+      
     }
     else{
       console.log("Las contraseñas no coinciden");

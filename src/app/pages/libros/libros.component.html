@@ -21,7 +21,7 @@
 
     <div class="container d-flex flex-column">
 
-        <div *ngIf="libros.length > 0; else noLibros" class="row">
+        <!-- <div *ngIf="libros.length > 0; else noLibros" class="row"> -->
 
             <div *ngFor="let libro of libros; let even = even" class="col-12 col-md-4 mb-2">
                 <div class="card">
@@ -51,7 +51,7 @@
                 </div>
             </div>
 
-        </div>
+        <!-- </div> -->
 
         <ng-template #noLibros>
 

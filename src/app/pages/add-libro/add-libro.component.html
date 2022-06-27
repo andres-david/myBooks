@@ -11,7 +11,7 @@
             <form class="formulario">
     
                 <input type="text" placeholder="Libro ID" #id_libro>
-                <input type="text" placeholder="Usuario ID" #id_usuario>
+                <input type="text" placeholder="Usuario ID">
                 <input type="text" placeholder="Titulo" #titulo>
                 <input type="text" placeholder="Tipo de Libro" #tipo>
                 <input type="text" placeholder="Autor" #autor>
@@ -21,8 +21,7 @@
                 <div class="btns">
                     
                     <a id="btnAdd"
-                    (click)="enviar(id_libro.value, id_usuario.value, 
-                            titulo.value, tipo.value, autor.value, precio.value, url.value)" 
+                    (click)="enviar(id_libro.value, titulo.value, tipo.value, autor.value, precio.value, url.value)" 
                     >
                         Añadir
                     </a>

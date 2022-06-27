@@ -1,0 +1,33 @@
+<div class="contenedorPpal">
+
+    <main class="mainAdd d-flex flex-column">
+    
+        <h2>
+            Iniciar Sesión
+        </h2>
+    
+        <div class="div-form">
+    
+            <form class="formulario">
+    
+                <input type="text" placeholder="Correo" #correo>
+                <input type="text" placeholder="Contraseña" #password>                
+                
+                <div class="btns">
+                    
+                    <a id="btnAdd"
+                    (click)="login(correo.value, password.value)" 
+                    >
+                        Iniciar Sesión
+                    </a>
+            
+                </div>
+            
+            </form>
+    
+        </div>
+    
+    </main>
+
+</div>
+

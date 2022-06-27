@@ -48,6 +48,7 @@ header{
     border-radius: 5px;
     color: #fff;
     transition: all 500ms;
+    cursor: pointer;
 }
 
 .menu li a:hover{
