@@ -9,18 +9,24 @@ import { Usuario } from '../../models/usuario';
 })
 export class FormularioRegistroComponent implements OnInit {
 
-  constructor(public usuarioService: UsuarioService) { }
+  public usuario: Usuario;
+
+  public passwordTwo: string;
+
+  constructor(public usuarioService: UsuarioService) {
+    this.usuario = new Usuario(null, null, null, null, null);
+   }
 
   ngOnInit(): void {
   }
 
-  registrarse(nombre: string, apellidos: string, correo: string, 
-              url: string, password1: string, password2: string)
+  registrarse()
   {
-    if( password1 == password2 ){
-      let usuario: Usuario = new Usuario(nombre, apellidos, correo, url, password1)
 
-      this.usuarioService.register( usuario )
+    if( this.usuario.password == this.passwordTwo ){
+      
+
+      this.usuarioService.register( this.usuario )
       .subscribe( ( data ) => {
         
         console.log( data );

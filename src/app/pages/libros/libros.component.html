@@ -21,37 +21,15 @@
 
     <div class="container d-flex flex-column">
 
-        <!-- <div *ngIf="libros.length > 0; else noLibros" class="row"> -->
+        <div class="row">
 
             <div *ngFor="let libro of libros; let even = even" class="col-12 col-md-4 mb-2">
-                <div class="card">
-                <img src=" {{libro.photo}} " alt="" class="card-img-top" height="500px">
-                <div class="card-body g-1">
-                    <p> {{libro.tipoLibro}} </p>
-                    <hr>
-                    <h5>{{libro.titulo}}</h5>
-                    <p>{{libro.autor}}</p>
-                    <p> {{libro.id_libro | ref}} </p>
-                    <p>{{libro.precio}} €</p>
-
-                    <div class="row gx-5">
-                        <button 
-                                [ngClass]="even === true ? 'btn btn-dark w-50' : 'btn btn-success w-50'"
-                                type="reset"
-                        >
-                            Comprar
-                        </button>
-
-                        <button class="btn btn-danger w-50" (click)="delete(libro.id_libro)">
-                            Eliminar
-                        </button>
-
-                    </div>
-                </div>
-                </div>
+                
+                <app-card [libroPadre]="libro" [evenPadre]="even" (eventDelete)="delete($event)"></app-card>
+    
             </div>
-
-        <!-- </div> -->
+            
+        </div>
 
         <ng-template #noLibros>
 
@@ -64,7 +42,7 @@
                         <p>No hay libros</p>
                         <hr>
                         <h5>Librería Vacía</h5>
-                        <!-- <button class="btn btn-dark w-100">Comprar</button> -->
+                
                     </div>
                     </div>
                 </div>
@@ -76,39 +54,8 @@
         
     </div>
 
-    <!-- <main class="mainAdd d-flex flex-column">
-    
-        <h2>
-            Añadir Libro
-        </h2>
-    
-        <div class="div-form">
-    
-            <form class="formulario">
-    
-                <input type="text" placeholder="Libro ID">
-                <input type="text" placeholder="Usuario ID" #id_usuario>
-                <input type="text" placeholder="Titulo" #titulo>
-                <input type="text" placeholder="Tipo de Libro" #tipo>
-                <input type="text" placeholder="Autor" #autor>
-                <input type="text" placeholder="Precio" #precio>
-                <input type="text" placeholder="Url Foto" #url>                 
-                
-                <div class="btns">
-                    
-                    <a id="btnAdd" (click)="enviar(id_libro.value, id_usuario.value, 
-                                                        titulo.value, tipo.value, autor.value, precio.value, url.value)">
-                        Añadir
-                    </a> 
-            
-                </div>
-            
-            </form>
-    
-        </div>
-    
-    </main> -->
-
 </div>
+
+
 
 

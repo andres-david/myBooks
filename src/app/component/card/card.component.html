@@ -1,0 +1,25 @@
+<div class="card">
+    <img src="{{libroPadre.foto}} " alt="" class="card-img-top" height="380px">
+    <div class="card-body g-1">
+        <p> {{libroPadre.tipo}}</p>
+        <hr>
+        <h5>{{libroPadre.titulo}}</h5>
+        <p>{{libroPadre.autor}}</p>
+        <p> {{libroPadre.id_libro | ref}} </p>
+        <p>{{libroPadre.precio}} €</p>
+
+        <div class="row gx-5">
+            <button 
+                    [ngClass]="evenPadre === true ? 'btn btn-dark w-50' : 'btn btn-success w-50'"
+                    type="reset"
+            >
+                Comprar
+            </button>
+
+            <button class="btn btn-danger w-50" (click)="delete(libroPadre.id_libro)">
+                Eliminar
+            </button>
+
+        </div>
+    </div>
+</div>
